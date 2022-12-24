@@ -1,0 +1,20 @@
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const Cargo_1 = __importDefault(require("./models/Cargo"));
+const Cliente_1 = require("./models/Cliente");
+const Endereco_1 = require("./models/Endereco");
+const Funcionario_1 = __importDefault(require("./models/Funcionario"));
+let cliente = new Cliente_1.Cliente("Rafaela", "990601375", "18191170736", true);
+let endereco1 = new Endereco_1.Endereco("22725430", "Rua cortes", "80", "", "Rio de Janeiro", "RJ");
+let endereco2 = new Endereco_1.Endereco("22720410", "av mananciais", "72", "casa 3", "Rio de Janeiro", "RJ");
+console.log(endereco1);
+console.log(endereco2);
+cliente.addEndereco(endereco1);
+cliente.addEndereco(endereco2);
+cliente.listarEnderecos();
+let funcionario = new Funcionario_1.default("Rozelia", "994590034", "00881137790", 1500);
+let cargo = new Cargo_1.default("Caixa");
+funcionario.addCargo(cargo);
