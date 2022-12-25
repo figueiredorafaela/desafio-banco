@@ -16,8 +16,12 @@ class ContaCorrente extends Conta_1.default {
         this._limite = limite;
     }
     transferir(contaDestino, valor) {
-        this.sacar(valor);
-        contaDestino.depositar(valor);
+        if (valor <= this.debito.valor) {
+            this.sacar(valor);
+            contaDestino.depositar(valor);
+        }
+        else
+            console.log("Saldo insuficiente");
     }
     calcularSaldo() {
         return this.debito.valor;

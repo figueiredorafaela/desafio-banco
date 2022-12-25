@@ -19,8 +19,12 @@ export default class ContaCorrente extends Conta{
     }
     
     public transferir(contaDestino: Conta, valor: number){
-        this.sacar(valor)
-        contaDestino.depositar(valor)   
+        if(valor <= this.debito.valor){
+            this.sacar(valor)
+            contaDestino.depositar(valor)
+        }
+        else console.log("Saldo insuficiente")
+           
     }
 
     public calcularSaldo(){

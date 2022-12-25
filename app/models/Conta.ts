@@ -23,8 +23,7 @@ export default abstract class Conta{
     public sacar(valor: number) : void {
         if(valor <= this.debito.valor)
             this.debito.valor -= valor;
-        else
-        throw new Error("Saldo insuficiente");                
+        else console.log("Saldo insuficiente");                
     }
 
 }

@@ -16,7 +16,10 @@ class ContaPoupanca extends Conta_1.default {
         ContaPoupanca._rentabilidadeMensal = v;
     }
     calcularRendimento() {
-        ContaPoupanca._rentabilidadeMensal * this.debito.valor;
+        ContaPoupanca._rentabilidadeMensal *= this.debito.valor;
+    }
+    calcularSaldo() {
+        return this.debito.valor;
     }
 }
 exports.default = ContaPoupanca;

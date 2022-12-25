@@ -20,7 +20,7 @@ class Conta {
         if (valor <= this.debito.valor)
             this.debito.valor -= valor;
         else
-            throw new Error("Saldo insuficiente");
+            console.log("Saldo insuficiente");
     }
 }
 exports.default = Conta;

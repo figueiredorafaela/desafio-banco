@@ -9,7 +9,7 @@ import Pessoa from "./models/Pessoa"
 
 
 //Aplicação 1
-console.log("Aplicação 1")
+console.log("============== Início da aplicação 1 ==============\n")
 
 let funGerente = new Funcionario("Maria Silva", "21 9999-9999","000.000.000-00", 6500)
 let funAtendente = new Funcionario("Joao Santos", "21 1111-111","111.111.111-11", 3500)
@@ -20,8 +20,13 @@ let cargoAtendente = new Cargo("Atendente")
 funAtendente.addCargo(cargoAtendente)
 funGerente.addCargo(cargoGerente)
 
+console.log(funAtendente)
+console.log(funGerente)
+
+console.log("\n============== Fim da aplicação 1 ==============\n")
+
 //Aplicação 2
-console.log("Aplicação 2")
+console.log("============= Início da aplicação 2 =============\n")
 
 let cliente2 = new Cliente("Rafaela", "990601375","18191170736", true)
 let endereco1 = new Endereco("22725430", "Rua cortes", "80", "", "Rio de Janeiro", "RJ")
@@ -31,8 +36,10 @@ cliente2.addEndereco(endereco1)
 cliente2.addEndereco(endereco2)
 cliente2.listarEnderecos()
 
+console.log("============== Fim da aplicação 2 ==============\n")
+
 //Aplicação 3
-console.log("Aplicação 3")
+console.log("============= Início da aplicação 3 =============\n")
 
 let cliente3 = new Cliente("José Moreira","21 8888-8888", "888.888.888-88",false)
 let contaCorrente3 = new ContaCorrente("3030", 0)
@@ -45,10 +52,12 @@ contaCorrente3.depositar(100)
 
 contaCorrente3.sacar(50)
 
-console.log(`Saldo: ${contaCorrente3.calcularSaldo()}`)
+console.log(`Saldo em conta corrente ${contaCorrente3.numero}: ${contaCorrente3.calcularSaldo()}`)
+
+console.log("\n============== Fim da aplicação 3 ==============\n")
 
 //Aplicação 4
-console.log("Aplicação 4")
+console.log("============= Início da aplicação 4 =============\n")
 
 let clienteCorrente4 = new Cliente("Fernanda Couto", "21 2222-2222", "222.222.222-22", false)
 let contaCorrente4 = new ContaCorrente("4040", 0)
@@ -64,7 +73,18 @@ contaPoupanca4.depositar(1000)
 
 contaCorrente4.transferir(contaPoupanca4, 500)
 
+console.log(`Saldo em conta corrente ${contaCorrente4.numero}: ${contaCorrente4.calcularSaldo()}`)
+console.log(`Saldo em conta poupança ${contaPoupanca4.numero}: ${contaPoupanca4.calcularSaldo()}`)
 
+console.log("\n============== Fim da aplicação 4 ==============\n")
+
+//Aplicação 5
+console.log("============= Início da aplicação 5 =============\n")
+
+let clientePoupanca5 = new Cliente("Josue Matias", "21 6666-6666", "666.666.666-66", false)
+let contaPoupanca6 = new ContaPoupanca("5050", 0.01, 0)
+
+console.log("\n============== Fim da aplicação 5 ==============")
 
 
 
