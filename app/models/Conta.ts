@@ -1,47 +1,30 @@
-import { Cliente } from "./Cliente";
 import Credito from "./Crédito";
 import Debito from "./Débito";
 
 export default abstract class Conta{
+    debito: Debito = new Debito()
+
    
-    private _numero: string
-    private _cliente: Array<Cliente> = []
-
-    debito : Debito
-    credito: Credito
-
-    
-    constructor(numero: string){
-        this._numero = numero
-        
-    }
+    constructor(
+        private _numero: string, 
+        valor: number
+        ){
+            this.debito.valor = valor
+        }
     
     public get numero() : string {
         return this._numero
     }
-
-    public get Cliente() : Array<Cliente> {
-        return this._cliente
-    }
     
-    public set Cliente (v : Array<Cliente>) {
-        this._cliente = v;
+    public depositar(valor: number) : void {
+         this.debito.valor += valor
     }
 
-    public addCliente(cliente: Cliente){
-        this._cliente.push(cliente)
-    }
-    
-    public depositar(valor: number): void {
-         this.debito.valor += valor;
-    }
-
-    public sacar(valor: number): void {
+    public sacar(valor: number) : void {
         if(valor <= this.debito.valor)
             this.debito.valor -= valor;
         else
-        throw new Error('Saldo insuficiente')
-                
+        throw new Error("Saldo insuficiente");                
     }
 
 }

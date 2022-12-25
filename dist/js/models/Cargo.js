@@ -1,8 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 class Cargo {
-    constructor(nome) {
-        this._nome = nome;
+    constructor(_nome) {
+        this._nome = _nome;
     }
     get nome() {
         return this._nome;

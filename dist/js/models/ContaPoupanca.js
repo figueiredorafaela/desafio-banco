@@ -5,8 +5,8 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const Conta_1 = __importDefault(require("./Conta"));
 class ContaPoupanca extends Conta_1.default {
-    constructor(numero, rentabilidade) {
-        super(numero);
+    constructor(numero, rentabilidade, valor) {
+        super(numero, valor);
         ContaPoupanca._rentabilidadeMensal = rentabilidade;
     }
     get rentabilidadeMensal() {
@@ -16,7 +16,7 @@ class ContaPoupanca extends Conta_1.default {
         ContaPoupanca._rentabilidadeMensal = v;
     }
     calcularRendimento() {
-        this.debito.valor * 0.05; // ao mes
+        ContaPoupanca._rentabilidadeMensal * this.debito.valor;
     }
 }
 exports.default = ContaPoupanca;

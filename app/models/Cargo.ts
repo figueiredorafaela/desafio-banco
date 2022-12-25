@@ -1,9 +1,6 @@
 export default class Cargo{
-    private _nome: string
 
-    constructor(nome:string){
-        this._nome = nome
-    }
+    constructor(private _nome: string){}    
 
     
     public get nome() : string {

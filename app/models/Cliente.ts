@@ -1,3 +1,4 @@
+import Conta from "./Conta";
 import { Endereco } from "./Endereco";
 import Usuario from "./IUsuario";
 import Pessoa from "./Pessoa";
@@ -5,6 +6,7 @@ import Pessoa from "./Pessoa";
 export class Cliente extends Pessoa implements Usuario{
    private _vip: boolean 
    private _endereco: Array<Endereco> = []
+   private _conta: Array<Conta> = []
 
     
     constructor(nome: string,telefone: string, cpf: string, vip: boolean){
@@ -39,6 +41,18 @@ export class Cliente extends Pessoa implements Usuario{
             console.log(`UF: ${n.uf}`)
             console.log("")
         })
+    }
+
+    public get Conta() : Array<Conta> {
+        return this._conta
+    }
+    
+    public set Conta(v : Array<Conta>) {
+        this._conta = v;
+    }
+
+    public addConta(Conta: Conta){
+        this._conta.push(Conta)
     }
     
     autenticar(): boolean {

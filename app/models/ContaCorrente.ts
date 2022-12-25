@@ -2,11 +2,12 @@ import Conta from "./Conta";
 import Debito from "./Débito";
 
 export default class ContaCorrente extends Conta{
-    private _limite: number
-
-    constructor(numero: string, limite: number){
-        super(numero)
-        this._limite = limite
+    
+    constructor(
+        numero: string,
+        private _limite: number
+    ){
+        super(numero,_limite)
     }
     
     public get limite() : number {
@@ -17,8 +18,12 @@ export default class ContaCorrente extends Conta{
         this._limite = limite;
     }
     
-    public transferir(contaDestino : Conta, valor: number){
+    public transferir(contaDestino: Conta, valor: number){
         this.sacar(valor)
         contaDestino.depositar(valor)   
+    }
+
+    public calcularSaldo(){
+        return this.debito.valor
     }
 }

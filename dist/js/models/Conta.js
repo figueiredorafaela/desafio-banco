@@ -1,21 +1,17 @@
 "use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
+const D_bito_1 = __importDefault(require("./D\u00E9bito"));
 class Conta {
-    constructor(numero) {
-        this._cliente = [];
-        this._numero = numero;
+    constructor(_numero, valor) {
+        this._numero = _numero;
+        this.debito = new D_bito_1.default();
+        this.debito.valor = valor;
     }
     get numero() {
         return this._numero;
-    }
-    get Cliente() {
-        return this._cliente;
-    }
-    set Cliente(v) {
-        this._cliente = v;
-    }
-    addCliente(cliente) {
-        this._cliente.push(cliente);
     }
     depositar(valor) {
         this.debito.valor += valor;
@@ -24,7 +20,7 @@ class Conta {
         if (valor <= this.debito.valor)
             this.debito.valor -= valor;
         else
-            throw new Error('Saldo insuficiente');
+            throw new Error("Saldo insuficiente");
     }
 }
 exports.default = Conta;

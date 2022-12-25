@@ -9,6 +9,7 @@ class Cliente extends Pessoa_1.default {
     constructor(nome, telefone, cpf, vip) {
         super(nome, telefone, cpf);
         this._endereco = [];
+        this._conta = [];
         this._vip = vip;
     }
     get Endereco() {
@@ -34,6 +35,15 @@ class Cliente extends Pessoa_1.default {
             console.log(`UF: ${n.uf}`);
             console.log("");
         });
+    }
+    get Conta() {
+        return this._conta;
+    }
+    set Conta(v) {
+        this._conta = v;
+    }
+    addConta(Conta) {
+        this._conta.push(Conta);
     }
     autenticar() {
         return true;

@@ -5,9 +5,9 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const Conta_1 = __importDefault(require("./Conta"));
 class ContaCorrente extends Conta_1.default {
-    constructor(numero, limite) {
-        super(numero);
-        this._limite = limite;
+    constructor(numero, _limite) {
+        super(numero, _limite);
+        this._limite = _limite;
     }
     get limite() {
         return this._limite;
@@ -18,6 +18,9 @@ class ContaCorrente extends Conta_1.default {
     transferir(contaDestino, valor) {
         this.sacar(valor);
         contaDestino.depositar(valor);
+    }
+    calcularSaldo() {
+        return this.debito.valor;
     }
 }
 exports.default = ContaCorrente;

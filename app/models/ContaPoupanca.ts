@@ -3,8 +3,8 @@ import Conta from "./Conta";
 export default class ContaPoupanca extends Conta{
     private static _rentabilidadeMensal: number
 
-    constructor(numero: string, rentabilidade: number){
-        super(numero)
+    constructor(numero: string, rentabilidade: number, valor: number){
+        super(numero,valor)
         ContaPoupanca._rentabilidadeMensal = rentabilidade
     }
 
@@ -17,6 +17,6 @@ export default class ContaPoupanca extends Conta{
     }
     
     public calcularRendimento() : void{
-        this.debito.valor * 0.05 // ao mes
+        ContaPoupanca._rentabilidadeMensal * this.debito.valor
     }
 }

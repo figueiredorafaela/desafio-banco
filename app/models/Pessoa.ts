@@ -1,15 +1,12 @@
 import prompt from "prompt-sync";
 
 export default abstract class Pessoa{
-    private _nome: string
-    private _telefone: string
-    private _cpf: string
 
-    constructor(nome: string, telefone: string,cpf: string){
-            this._nome = nome
-            this._telefone = telefone
-            this._cpf = cpf 
-        }
+    constructor(
+        private _nome: string, 
+        private _telefone: string,
+        private _cpf: string
+    ){}
         
         public get nome() : string {
             return this._nome

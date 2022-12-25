@@ -2,13 +2,13 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Endereco = void 0;
 class Endereco {
-    constructor(cep, logradouro, numero, complemento, cidade, uf) {
-        this._cep = cep;
-        this._logradouro = logradouro;
-        this._uf = uf;
-        this._numero = numero;
-        this._cidade = cidade;
-        this._complemento = complemento;
+    constructor(_cep, _logradouro, _numero, _complemento, _cidade, _uf) {
+        this._cep = _cep;
+        this._logradouro = _logradouro;
+        this._numero = _numero;
+        this._complemento = _complemento;
+        this._cidade = _cidade;
+        this._uf = _uf;
     }
     get cep() {
         return this._cep;
