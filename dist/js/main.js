@@ -57,5 +57,18 @@ console.log("\n============== Fim da aplicação 4 ==============\n");
 //Aplicação 5
 console.log("============= Início da aplicação 5 =============\n");
 let clientePoupanca5 = new Cliente_1.Cliente("Josue Matias", "21 6666-6666", "666.666.666-66", false);
-let contaPoupanca6 = new ContaPoupanca_1.default("5050", 0.01, 0);
+let contaPoupanca5 = new ContaPoupanca_1.default("5050", 0.01, 0);
+let dataInicio = new Date();
+dataInicio.setDate(1);
+dataInicio.setMonth(1);
+dataInicio.setFullYear(2022);
+let dataFinal = new Date();
+dataFinal.setDate(31);
+dataFinal.setMonth(11);
+dataFinal.setFullYear(2022);
+while (dataFinal.getMonth() >= dataInicio.getMonth()) {
+    contaPoupanca5.depositar(200);
+    dataFinal.setMonth(dataFinal.getMonth() - 1);
+}
+console.log(`Saldo da conta poupança ${contaPoupanca5.numero}: ${contaPoupanca5.calcularSaldo()}`);
 console.log("\n============== Fim da aplicação 5 ==============");

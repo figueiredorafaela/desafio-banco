@@ -1,9 +1,8 @@
 export default class Debito{
   
     private _valor: number
-    private _data: Date
+    private _data: Date = new Date()
         
-
     public get valor(){
         return this._valor
     }

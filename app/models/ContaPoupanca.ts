@@ -16,11 +16,11 @@ export default class ContaPoupanca extends Conta{
         ContaPoupanca._rentabilidadeMensal = v;
     }
     
-    public calcularRendimento() : void{
-        ContaPoupanca._rentabilidadeMensal *= this.debito.valor
+    public calcularRendimento() : number{
+        return ContaPoupanca._rentabilidadeMensal *= this.debito.valor
     }
 
     public calcularSaldo() : number{
-        return this.debito.valor
+        return this.debito.valor + this.calcularRendimento()
     }
 }
