@@ -10,6 +10,10 @@ export default class Debito{
     public set valor(v : number) {
         this._valor = v;
     }
+
+    public set data(v : Date) {
+        this.data = v;
+    }
     
     public get data(){
         return this._data

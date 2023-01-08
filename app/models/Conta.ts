@@ -16,14 +16,21 @@ export default abstract class Conta{
         return this._numero
     }
     
-    public depositar(valor: number) : void {
-         this.debito.valor += valor
+    public depositar(valor: number) : Date {
+        const dataDeposito = this.debito.data
+        this.debito.valor += valor
+
+        return dataDeposito
     }
 
-    public sacar(valor: number) : void {
+    public sacar(valor: number) : Date {
+        const dataSaque = this.debito.data
+
         if(valor <= this.debito.valor)
             this.debito.valor -= valor;
-        else console.log("Saldo insuficiente");                
+        else console.log("Saldo insuficiente");   
+        
+        return dataSaque
     }
 
 }

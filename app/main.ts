@@ -84,29 +84,79 @@ console.log("============= Início da aplicação 5 =============\n")
 let clientePoupanca5 = new Cliente("Josue Matias", "21 6666-6666", "666.666.666-66", false)
 let contaPoupanca5 = new ContaPoupanca("5050", 0.01, 0)
 
-let dataInicio = new Date()
-dataInicio.setDate(1)
-dataInicio.setMonth(1)
-dataInicio.setFullYear(2022)
+contaPoupanca5.depositar(200).setFullYear(2022, 0, 1);
+  console.log("Deposito 1")
+  console.log(`Saldo da conta poupança ${contaPoupanca5.numero}: ${contaPoupanca5.calcularSaldoSemRendimento()}`)
+  console.log(`\nSaldo da conta poupança ${contaPoupanca5.numero} (rendimento 1%): ${contaPoupanca5.calcularSaldo()}`)
 
+  contaPoupanca5.depositar(200).setFullYear(2022, 1, 1);
+  console.log("\nDeposito 2")
+  console.log(`Saldo da conta poupança ${contaPoupanca5.numero}: ${contaPoupanca5.calcularSaldoSemRendimento()}`)
+  console.log(`\nSaldo da conta poupança ${contaPoupanca5.numero} (rendimento 1%): ${contaPoupanca5.calcularSaldo()}`)
+  
+  contaPoupanca5.depositar(200).setFullYear(2022, 2, 1);
+  console.log("\nDeposito 3")
+  console.log(`Saldo da conta poupança ${contaPoupanca5.numero}: ${contaPoupanca5.calcularSaldoSemRendimento()}`)
+  console.log(`\nSaldo da conta poupança ${contaPoupanca5.numero} (rendimento 1%): ${contaPoupanca5.calcularSaldo()}`)
 
-let dataFinal = new Date()
-dataFinal.setDate(31)
-dataFinal.setMonth(11)
-dataFinal.setFullYear(2022)
+  contaPoupanca5.sacar(100).setFullYear(2022, 2, 5);
+  console.log("\nSaque 1")
+  console.log(`Saldo da conta poupança ${contaPoupanca5.numero}: ${contaPoupanca5.calcularSaldoSemRendimento()}`)
+  console.log(`\nSaldo da conta poupança ${contaPoupanca5.numero} (rendimento 1%): ${contaPoupanca5.calcularSaldo()}`)
+   
+  contaPoupanca5.depositar(200).setFullYear(2022, 3, 1);
+  console.log("\nDeposito 4")
+  console.log(`Saldo da conta poupança ${contaPoupanca5.numero}: ${contaPoupanca5.calcularSaldoSemRendimento()}`)
+  console.log(`\nSaldo da conta poupança ${contaPoupanca5.numero} (rendimento 1%): ${contaPoupanca5.calcularSaldo()}`)
+  
+  contaPoupanca5.depositar(200).setFullYear(2022, 4, 1);
+  console.log("\nDeposito 5")
+  console.log(`Saldo da conta poupança ${contaPoupanca5.numero}: ${contaPoupanca5.calcularSaldoSemRendimento()}`)
+  console.log(`\nSaldo da conta poupança ${contaPoupanca5.numero} (rendimento 1%): ${contaPoupanca5.calcularSaldo()}`)
+  
+  contaPoupanca5.depositar(200).setFullYear(2022, 5, 1);
+  console.log("\nDeposito 6")
+  console.log(`Saldo da conta poupança ${contaPoupanca5.numero}: ${contaPoupanca5.calcularSaldoSemRendimento()}`)
+  console.log(`\nSaldo da conta poupança ${contaPoupanca5.numero} (rendimento 1%): ${contaPoupanca5.calcularSaldo()}`)
 
-while(dataFinal.getMonth() >= dataInicio.getMonth()){
-    contaPoupanca5.depositar(200)
-    dataFinal.setMonth(dataFinal.getMonth() - 1) 
-}
+  contaPoupanca5.depositar(200).setFullYear(2022, 6, 1);
+  console.log("\nDeposito 7")
+  console.log(`Saldo da conta poupança ${contaPoupanca5.numero}: ${contaPoupanca5.calcularSaldoSemRendimento()}`)
+  console.log(`\nSaldo da conta poupança ${contaPoupanca5.numero} (rendimento 1%): ${contaPoupanca5.calcularSaldo()}`)
+  
+  contaPoupanca5.sacar(200).setFullYear(2022, 6, 8);
+  console.log("\nSaque 2")
+  console.log(`Saldo da conta poupança ${contaPoupanca5.numero}: ${contaPoupanca5.calcularSaldoSemRendimento()}`)
+  console.log(`\nSaldo da conta poupança ${contaPoupanca5.numero} (rendimento 1%): ${contaPoupanca5.calcularSaldo()}`)
 
-console.log(`Saldo da conta poupança ${contaPoupanca5.numero}: ${contaPoupanca5.calcularSaldo()}`)
+  contaPoupanca5.depositar(200).setFullYear(2022, 7, 1);
+  console.log("\nDeposito 8")
+  console.log(`Saldo da conta poupança ${contaPoupanca5.numero}: ${contaPoupanca5.calcularSaldoSemRendimento()}`)
+  console.log(`\nSaldo da conta poupança ${contaPoupanca5.numero} (rendimento 1%): ${contaPoupanca5.calcularSaldo()}`)
+  
+  contaPoupanca5.depositar(200).setFullYear(2022, 8, 1);
+  console.log("\nDeposito 9")
+  console.log(`Saldo da conta poupança ${contaPoupanca5.numero}: ${contaPoupanca5.calcularSaldoSemRendimento()}`)
+  console.log(`\nSaldo da conta poupança ${contaPoupanca5.numero} (rendimento 1%): ${contaPoupanca5.calcularSaldo()}`)
+  
+  contaPoupanca5.depositar(200).setFullYear(2022, 9, 1);
+  console.log("\nDeposito 10")
+  console.log(`Saldo da conta poupança ${contaPoupanca5.numero}: ${contaPoupanca5.calcularSaldoSemRendimento()}`)
+  console.log(`\nSaldo da conta poupança ${contaPoupanca5.numero} (rendimento 1%): ${contaPoupanca5.calcularSaldo()}`)
+  
+  contaPoupanca5.depositar(200).setFullYear(2022, 10, 1);
+  console.log("\nDeposito 11")
+  console.log(`Saldo da conta poupança ${contaPoupanca5.numero}: ${contaPoupanca5.calcularSaldoSemRendimento()}`)
+  console.log(`\nSaldo da conta poupança ${contaPoupanca5.numero} (rendimento 1%): ${contaPoupanca5.calcularSaldo()}`)
+  
+  contaPoupanca5.depositar(200).setFullYear(2022, 11, 1);
+  console.log("\nDeposito 12")
+  console.log(`Saldo da conta poupança ${contaPoupanca5.numero}: ${contaPoupanca5.calcularSaldoSemRendimento()}`)
+
+  console.log(`\nSaldo da conta poupança ${contaPoupanca5.numero} (rendimento 1%): ${contaPoupanca5.calcularSaldo()}`)
 
 
 console.log("\n============== Fim da aplicação 5 ==============")
-
-
-
 
 
 
